@@ -182,17 +182,6 @@ F 3 "" H 13350 4150 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L Connector:Raspberry_Pi_2_3 J3
-U 1 1 5A141DFA
-P 3650 8100
-F 0 "J3" H 2900 9350 50  0000 C CNN
-F 1 "Raspberry_Pi_2_3" H 4300 9350 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 4650 9350 50  0001 C CNN
-F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/RPI-3B-V1_2-SCHEMATIC-REDUCED.pdf" H 3700 7950 50  0001 C CNN
-	1    3650 8100
-	1    0    0    -1  
-$EndComp
-$Comp
 L LibreSolar:MCP2515-E_ST U2
 U 1 1 5A1444C1
 P 3700 3000
@@ -569,12 +558,12 @@ DCDC_IN chosen as input\nin to stay alive if solar\ngoes down for boost mode\nop
 $Comp
 L interface:TJA1049T-3 U1
 U 1 1 5A144F99
-P 8850 2700
-F 0 "U1" H 8500 3050 50  0000 C CNN
-F 1 "TJA1042T/3" H 9150 3050 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8850 2200 50  0001 C CIN
-F 3 "http://www.nxp.com/documents/data_sheet/TJA1049.pdf" H 8850 2700 50  0001 C CNN
-	1    8850 2700
+P 8900 2700
+F 0 "U1" H 8550 3050 50  0000 C CNN
+F 1 "TJA1042T/3" H 9200 3050 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8900 2200 50  0001 C CIN
+F 3 "http://www.nxp.com/documents/data_sheet/TJA1049.pdf" H 8900 2700 50  0001 C CNN
+	1    8900 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -698,85 +687,74 @@ CAN_H
 Text Label 10750 2650 0    50   ~ 0
 CAN_L
 Wire Wire Line
-	4550 8100 5150 8100
+	4600 8100 5200 8100
 Wire Wire Line
-	4550 8200 5150 8200
+	4600 8200 5200 8200
 Wire Wire Line
-	4550 8300 5150 8300
+	4600 8300 5200 8300
 Wire Wire Line
-	4550 8000 5150 8000
+	4600 8000 5200 8000
 $Comp
 L power:GND #PWR030
 U 1 1 5A15D40D
-P 3950 9650
-F 0 "#PWR030" H 3950 9400 50  0001 C CNN
-F 1 "GND" H 3955 9477 50  0000 C CNN
-F 2 "" H 3950 9650 50  0001 C CNN
-F 3 "" H 3950 9650 50  0001 C CNN
-	1    3950 9650
+P 3900 9600
+F 0 "#PWR030" H 3900 9350 50  0001 C CNN
+F 1 "GND" H 3905 9427 50  0000 C CNN
+F 2 "" H 3900 9600 50  0001 C CNN
+F 3 "" H 3900 9600 50  0001 C CNN
+	1    3900 9600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR026
 U 1 1 5A15E50C
-P 3750 6500
-F 0 "#PWR026" H 3750 6350 50  0001 C CNN
-F 1 "+3.3V" H 3750 6640 50  0000 C CNN
-F 2 "" H 3750 6500 50  0000 C CNN
-F 3 "" H 3750 6500 50  0000 C CNN
-	1    3750 6500
+P 3800 6500
+F 0 "#PWR026" H 3800 6350 50  0001 C CNN
+F 1 "+3.3V" H 3800 6640 50  0000 C CNN
+F 2 "" H 3800 6500 50  0000 C CNN
+F 3 "" H 3800 6500 50  0000 C CNN
+	1    3800 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR025
 U 1 1 5A15E512
-P 3450 6500
-F 0 "#PWR025" H 3450 6350 50  0001 C CNN
-F 1 "+5V" H 3450 6640 50  0000 C CNN
-F 2 "" H 3450 6500 50  0000 C CNN
-F 3 "" H 3450 6500 50  0000 C CNN
-	1    3450 6500
+P 3500 6500
+F 0 "#PWR025" H 3500 6350 50  0001 C CNN
+F 1 "+5V" H 3500 6640 50  0000 C CNN
+F 2 "" H 3500 6500 50  0000 C CNN
+F 3 "" H 3500 6500 50  0000 C CNN
+	1    3500 6500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 6500 3750 6800
+	3800 6500 3800 6800
 Wire Wire Line
-	3450 6500 3450 6800
+	3500 6500 3500 6800
 Wire Wire Line
-	3450 6600 3550 6600
+	3500 6600 3600 6600
 Wire Wire Line
-	3550 6600 3550 6800
+	3600 6600 3600 6800
 Wire Wire Line
-	3750 6600 3850 6600
+	3800 6600 3900 6600
 Wire Wire Line
-	3850 6600 3850 6800
-Connection ~ 3750 6600
-Connection ~ 3450 6600
+	3900 6600 3900 6800
+Connection ~ 3800 6600
+Connection ~ 3500 6600
 Wire Wire Line
-	3250 9400 3250 9500
+	3300 9400 3300 9500
 Wire Wire Line
-	3250 9500 3950 9500
+	3700 9400 3700 9500
+Connection ~ 3700 9500
 Wire Wire Line
-	3950 9400 3950 9650
-Connection ~ 3950 9500
+	3600 9400 3600 9500
+Connection ~ 3600 9500
 Wire Wire Line
-	3850 9400 3850 9500
-Connection ~ 3850 9500
+	3500 9400 3500 9500
+Connection ~ 3500 9500
 Wire Wire Line
-	3750 9400 3750 9500
-Connection ~ 3750 9500
-Wire Wire Line
-	3650 9400 3650 9500
-Connection ~ 3650 9500
-Wire Wire Line
-	3550 9400 3550 9500
-Connection ~ 3550 9500
-Wire Wire Line
-	3450 9400 3450 9500
-Connection ~ 3450 9500
-Wire Wire Line
-	3350 9400 3350 9500
-Connection ~ 3350 9500
+	3400 9400 3400 9500
+Connection ~ 3400 9500
 $Comp
 L power:GND #PWR022
 U 1 1 5A1961B3
@@ -808,29 +786,29 @@ Connection ~ 14350 4400
 $Comp
 L power:GND #PWR019
 U 1 1 5A1ACAC5
-P 8850 3200
-F 0 "#PWR019" H 8850 2950 50  0001 C CNN
-F 1 "GND" H 8855 3027 50  0000 C CNN
-F 2 "" H 8850 3200 50  0001 C CNN
-F 3 "" H 8850 3200 50  0001 C CNN
-	1    8850 3200
+P 8900 3200
+F 0 "#PWR019" H 8900 2950 50  0001 C CNN
+F 1 "GND" H 8905 3027 50  0000 C CNN
+F 2 "" H 8900 3200 50  0001 C CNN
+F 3 "" H 8900 3200 50  0001 C CNN
+	1    8900 3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8850 3100 8850 3200
+	8900 3100 8900 3200
 $Comp
 L power:+5V #PWR017
 U 1 1 5A1B24A4
-P 8850 2200
-F 0 "#PWR017" H 8850 2050 50  0001 C CNN
-F 1 "+5V" H 8850 2340 50  0000 C CNN
-F 2 "" H 8850 2200 50  0000 C CNN
-F 3 "" H 8850 2200 50  0000 C CNN
-	1    8850 2200
+P 8900 2200
+F 0 "#PWR017" H 8900 2050 50  0001 C CNN
+F 1 "+5V" H 8900 2340 50  0000 C CNN
+F 2 "" H 8900 2200 50  0000 C CNN
+F 3 "" H 8900 2200 50  0000 C CNN
+	1    8900 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8850 2300 8850 2200
+	8900 2300 8900 2200
 Wire Wire Line
 	4300 2400 4750 2400
 Wire Wire Line
@@ -840,24 +818,24 @@ RXCAN
 Text Label 4750 2500 2    50   ~ 0
 TXCAN
 Wire Wire Line
-	8350 2500 8050 2500
+	8400 2500 8100 2500
 Wire Wire Line
-	8350 2600 8050 2600
-Text Label 8050 2500 0    50   ~ 0
+	8400 2600 8100 2600
+Text Label 8100 2500 0    50   ~ 0
 TXCAN
-Text Label 8050 2600 0    50   ~ 0
+Text Label 8100 2600 0    50   ~ 0
 RXCAN
-Text Label 5150 8000 2    50   ~ 0
+Text Label 5200 8000 2    50   ~ 0
 SPI_CE0
-Text Label 5150 8100 2    50   ~ 0
+Text Label 5200 8100 2    50   ~ 0
 SPI_MISO
-Text Label 5150 8200 2    50   ~ 0
+Text Label 5200 8200 2    50   ~ 0
 SPI_MOSI
-Text Label 5150 8300 2    50   ~ 0
+Text Label 5200 8300 2    50   ~ 0
 SPI_SCLK
 Wire Wire Line
-	2750 8000 2150 8000
-Text Label 2150 8000 0    50   ~ 0
+	2800 8000 2200 8000
+Text Label 2200 8000 0    50   ~ 0
 LED1
 $Comp
 L power:+3.3V #PWR024
@@ -926,8 +904,8 @@ SPI_MISO
 Text Label 2650 2400 0    50   ~ 0
 SPI_MOSI
 Wire Wire Line
-	2750 8300 2150 8300
-Text Label 2150 8300 0    50   ~ 0
+	2800 8300 2200 8300
+Text Label 2200 8300 0    50   ~ 0
 CAN_INT
 Wire Wire Line
 	4300 3000 4750 3000
@@ -1004,12 +982,12 @@ Wire Wire Line
 Wire Wire Line
 	1800 2650 1800 2550
 Wire Wire Line
-	9350 2600 9900 2600
+	9400 2600 9950 2600
 Wire Wire Line
-	9350 2800 9900 2800
-Text Label 9900 2800 2    50   ~ 0
+	9400 2800 9950 2800
+Text Label 9950 2800 2    50   ~ 0
 CAN_L
-Text Label 9900 2600 2    50   ~ 0
+Text Label 9950 2600 2    50   ~ 0
 CAN_H
 $Comp
 L power:GND #PWR029
@@ -1066,18 +1044,18 @@ RX1BF
 Text Label 4750 3100 2    50   ~ 0
 TX0BF
 Wire Wire Line
-	8350 2800 7850 2800
+	8400 2800 7900 2800
 Wire Wire Line
-	7850 2700 7850 2800
+	7900 2700 7900 2800
 $Comp
 L power:+3.3V #PWR018
 U 1 1 5A2E151E
-P 7850 2700
-F 0 "#PWR018" H 7850 2550 50  0001 C CNN
-F 1 "+3.3V" H 7850 2840 50  0000 C CNN
-F 2 "" H 7850 2700 50  0000 C CNN
-F 3 "" H 7850 2700 50  0000 C CNN
-	1    7850 2700
+P 7900 2700
+F 0 "#PWR018" H 7900 2550 50  0001 C CNN
+F 1 "+3.3V" H 7900 2840 50  0000 C CNN
+F 2 "" H 7900 2700 50  0000 C CNN
+F 3 "" H 7900 2700 50  0000 C CNN
+	1    7900 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1146,4 +1124,39 @@ Text Notes 8400 1400 0    100  ~ 0
 CAN transceiver
 Text Notes 11000 1400 0    100  ~ 0
 ESD protection + Connector
+Wire Wire Line
+	8400 2900 8000 2900
+Text Label 8000 2900 0    50   ~ 0
+CAN_STB
+Wire Wire Line
+	2800 8200 2200 8200
+Text Label 2200 8200 0    50   ~ 0
+CAN_STB
+$Comp
+L LibreSolar:Raspberry_Pi_HAT_26p J3
+U 1 1 5A3B347A
+P 3700 8100
+F 0 "J3" H 2950 9350 50  0000 C CNN
+F 1 "Raspberry_Pi_HAT_26p" H 4500 9350 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x13_Pitch2.54mm" H 4700 9350 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/RPI-3B-V1_2-SCHEMATIC-REDUCED.pdf" H 3750 7950 50  0001 C CNN
+	1    3700 8100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4600 7400
+NoConn ~ 4600 7300
+NoConn ~ 4600 7200
+NoConn ~ 4600 7900
+NoConn ~ 2800 8100
+NoConn ~ 2800 7700
+NoConn ~ 2800 7600
+NoConn ~ 2800 7500
+NoConn ~ 4600 8800
+NoConn ~ 4600 8900
+Wire Wire Line
+	3300 9500 3900 9500
+Wire Wire Line
+	3900 9500 3900 9600
+NoConn ~ 13000 4700
+NoConn ~ 13000 3100
 $EndSCHEMATC
