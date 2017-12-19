@@ -11,8 +11,10 @@ The pin header is compatible with all Raspberry Pi models, but the size is espec
 ![Raspberry Pi CAN interface PCB](CAN_RPi-ZeroW.png)
 
 ## Features:
-- CAN interface using MCP2515 controller and TJA1042T/3 transceiver
+- CAN interface via SPI using MCP2515 controller and TJA1042T/3 transceiver
 - Power supply of Raspberry Pi via bus connector (RJ45)
+- CAN transceiver standby connected to GPIO 24 (low power consumption mode possible)
+- LED on GPIO 22 for custom status information
 
 ## Installation
 
@@ -28,14 +30,20 @@ dtoverlay=mcp2515-can0,oscillator=8000000,interrupt=25
 
 Other guides for CAN on Raspberry Pi still suggest to add a line *dtoverlay=spi-bcm2835-overlay*. This is not true anymore, as Raspbian loads the BCM2835 SPI driver automatically.
 
-Bring the interface up with the following commands (change bitrate according to your needs):
+Bring the interface up with the following command (change bitrate according to your needs):
 
 ```
-sudo ip link set can0 up type can bitrate 500000
+sudo ip link set can0 up type can bitrate 250000
 ```
 
 Now you should be able to send some test messages with *cansend* or watch messages on the bus:
 
 ```
 candump can0
+```
+
+If something went wrong, try the following command to get some information about the CAN interface:
+
+```
+ip -s -d link show can0
 ```
